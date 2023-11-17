@@ -1,0 +1,192 @@
+\documentclass[oneside,brazilian,english]{conf/UNISINOSmonografia}
+\usepackage[utf8]{inputenc} 
+\usepackage[T1]{fontenc} 
+\usepackage{graphicx}
+
+\usepackage{tcolorbox}
+\usepackage{amsfonts}
+
+\usepackage{xspace}
+\usepackage{multirow}
+
+\usepackage{longtable}
+\usepackage{pdflscape}
+\usepackage[titles]{tocloft}
+
+\usepackage{arydshln}
+
+
+\tolerance=1
+\emergencystretch=\maxdimen
+\hyphenpenalty=10000
+\hbadness=10000
+
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+
+
+
+\usepackage[alf, 	
+			 		abnt-emphasize=bf,
+				    abnt-url-package=none,
+				    abnt-repeated-title-omit=yes,
+				    abnt-full-initials=yes, %yes nome por extenso, no apenas iniciais
+				    bibjustif,
+					abnt-etal-list=3												%abreviar com mais de 3 autores
+]{abntex2/abntex2cite}
+
+\usepackage{pdfpages}
+
+\titulo{Modelo de Dissertação e Tese - Programa de Pós-graduação em Computação Aplicada Unisinos}
+\autor{Sobrenome}{Nome}
+
+\orientador[Prof.]{Sobrenome, ~PhD}{Nome Orientador}
+\coorientador[Prof.]{Sobrenome, ~PhD}{Nome do Coorientandor}
+
+\local{São Leopoldo}
+\ano{2020}
+
+\unidade{Unidade Acadêmica de Pesquisa e Pós-Graduação}
+\curso{Programa de Pós-Graduação em Computação Aplicada}
+\nivel{Nível Mestrado}
+\natureza{
+Master Thesis presented as a partial requirement to obtain the Master’s degree from the Applied Computing Graduate Program of the Universidade do Vale do Rio dos Sinos — UNISINOS}
+
+\cip{Dissertação (mestrado)}{007.987}
+\bibliotecario{Bibliotecária responsável: Fulana da Silva}{12/3456}
+
+\palavrachave{english}{Keyword 1}
+\palavrachave{english}{Keyword 2}
+\palavrachave{english}{Keyword 3}
+
+\palavrachave{brazilian}{Palavra chave 1}
+\palavrachave{brazilian}{Palavra chave 2}
+\palavrachave{brazilian}{Palavra chave 3}
+
+
+\begin{document}
+
+\capa
+\folhaderosto
+\folhadeaprovacao 
+
+
+\begin{dedicatoria}
+To my family.\\[4ex]
+\end{dedicatoria}
+\begin{dedicatoria}
+
+\begin{itshape} 
+"I think, therefore I am."\\
+\end{itshape}
+--- \textsc{Rene Descartes} % \textsc é o "small caps"
+\end{dedicatoria}
+
+%=======================================================================
+% Agradecimentos (opcional).
+%=======================================================================
+\begin{agradecimentos}
+
+AGRADECIMENTOS
+
+\end{agradecimentos}
+
+%=======================================================================
+% Epígrafe (opcional).
+%
+% ``[...] o autor apresenta uma citação, seguida de indicação de autoria,
+% relacionada com a matéria tratada no corpo do trabalho. Podem, também,
+% constar epígrafes nas folhas de aberturas das seções primárias.''
+%=======================================================================
+%\begin{epigrafe}
+%``\textit{Ninguém abre um livro sem que aprenda alguma coisa}''.\\
+%(Anônimo)
+%\end{epigrafe}
+
+%=======================================================================
+% Resumo.
+%
+% A recomendação é para 150 a 500 palavras.
+%=======================================================================
+\begin{abstract}
+
+    \noindent Este documento apresenta orientações para uso da classe \LaTeX\ de formatação de dissertações e teses para o PPGCA UNISINOS\@.  Ao mesmo tempo, ele serve como exemplo de uso da classe, demonstrando os principais comandos a serem utilizados, e outras orientações mais gerais de uso do \LaTeX.  Adicionalmente, procuramos incluir no documento algumas orientações sobre a escrita da monografia em si, reunindo dicas e recomendações que contribuem para aumentar a qualidade técnica dos trabalhos acadêmicos.  O Resumo deve conter de 150 a 500~palavras e nele não deve haver citações. Sugere-se a utilização de parágrafo único.
+    \end{abstract}
+
+\begin{otherlanguage}{brazilian}
+  \begin{abstract}
+    \noindent Este documento apresenta orientações para uso da classe \LaTeX\ de formatação de dissertações e teses para o PPGCA UNISINOS\@.  Ao mesmo tempo, ele serve como exemplo de uso da classe, demonstrando os principais comandos a serem utilizados, e outras orientações mais gerais de uso do \LaTeX.  Adicionalmente, procuramos incluir no documento algumas orientações sobre a escrita da monografia em si, reunindo dicas e recomendações que contribuem para aumentar a qualidade técnica dos trabalhos acadêmicos.  O Resumo deve conter de 150 a 500~palavras e nele não deve haver citações. Sugere-se a utilização de parágrafo único.
+  \end{abstract}
+\end{otherlanguage}
+
+
+
+%=======================================================================
+% Lista de Figuras (opcional).
+%=======================================================================
+\setlength{\cftfignumwidth}{0.9in} % from p. 9
+\renewcommand\cftfigindent{3pt}
+\renewcommand\cftfigpresnum{\figurename{} }
+\renewcommand\cftfigaftersnum{ -- }
+\listoffigures
+
+
+%=======================================================================
+% Lista de Tabelas (opcional).
+%=======================================================================
+\setlength{\cfttabnumwidth}{0.9in} % from p. 9
+\renewcommand\cfttabindent{3pt}
+\renewcommand\cfttabpresnum{\tablename{} }
+\renewcommand\cfttabaftersnum{ -- }
+\listoftables
+
+%=======================================================================
+% Lista de Abreviaturas (opcional).
+%
+% Deve ser passada como parâmetro a maior das abreviaturas utilizadas.
+%=======================================================================
+%\begin{listadeabreviaturas}{seg., segs.}
+%\item[ampl.] ampliado, -a
+%\item[atual.] atualizado, -a
+%\item[coord.] coordenador
+%\item[N.~T.] Novo Testamento
+%\item[seg., segs.] seguinte, -s
+%\end{listadeabreviaturas}
+
+%=======================================================================
+% Lista de Siglas (opcional).
+%
+% Deve ser passada como parâmetro a maior das siglas utilizadas.
+%=======================================================================
+\begin{listadesiglas}{ABNT}
+    \item[ABNT] Associação Brasileira de Normas Técnincas
+\end{listadesiglas}
+
+%=======================================================================
+% Sumário
+%=======================================================================
+\renewcommand{\cftchapfont}{\bfseries\scshape}
+\renewcommand{\cftsecfont}{\bfseries}
+\tableofcontents
+
+%=======================================================================
+% Introdução
+%=======================================================================
+\input{introduction.tex}
+\input{background.tex}
+\input{relatedwork.tex}
+\input{model.tex}
+\input{methodology}
+\input{results.tex}
+\input{conclusion.tex}
+
+\bibliography{bib/bibliography}
+
+\end{document}
